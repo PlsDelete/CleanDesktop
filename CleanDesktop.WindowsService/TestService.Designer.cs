@@ -1,6 +1,6 @@
 ﻿namespace CleanDesktop.WindowsService
 {
-    partial class Service1
+    partial class TestService
     {
         /// <summary> 
         /// Обязательная переменная конструктора.
@@ -19,7 +19,7 @@
             }
             base.Dispose(disposing);
         }
-
+            
         #region Код, автоматически созданный конструктором компонентов
 
         /// <summary> 
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            this.ServiceName = "Service1";
+            this.ServiceName = "CleanDesktop";
         }
 
         #endregion

@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.ServiceProcess;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CleanDesktop.WindowsService
 {
@@ -12,14 +8,28 @@ namespace CleanDesktop.WindowsService
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
-        static void Main()
+        static void Main(string[] args)
         {
             ServiceBase[] ServicesToRun;
             ServicesToRun = new ServiceBase[]
             {
-                new Service1()
+                //new CleanService()
+                new TestService()
             };
-            ServiceBase.Run(ServicesToRun);
+
+            if (Environment.UserInteractive)
+            {
+                // Запуск в интерактивном режиме для отладки
+                TestService service = new TestService();
+                service.Test(args);
+
+            }
+            else
+            {
+                // Запуск как служба
+                ServiceBase.Run(ServicesToRun);
+            }
+            
         }
     }
 }
