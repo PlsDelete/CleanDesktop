@@ -1,13 +1,12 @@
-﻿using System.Runtime.InteropServices;
+﻿using System;
+using System.Runtime.InteropServices;
+using System.Threading.Tasks;
 
 namespace CleanDesktop.ConsoleApp
 {
 
     public class InterfaceHandler
     {
-
-
-
         [DllImport("user32.dll")]
         public static extern bool SetCursorPos(int X, int Y);
 

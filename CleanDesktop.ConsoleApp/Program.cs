@@ -8,6 +8,7 @@ class Program
     {
         while (true)
         {
+            //InterfaceHandler.ShowCurrsorPos();
             CheckIdleTime();
             Thread.Sleep(100);
         }
